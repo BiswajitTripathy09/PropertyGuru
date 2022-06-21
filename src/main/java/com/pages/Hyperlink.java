@@ -6,8 +6,8 @@ import com.Utility.BaseClass;
 
 public class Hyperlink extends BaseClass{
 
-	static By Buy=By.xpath("//*[@id=\"navbar-main\"]/div/div[2]/ul[2]/li[1]/a");
-	static By Rent=By.xpath("//*[@id=\"navbar-main\"]/div/div[2]/ul[2]/li[2]/a");
+	static By Buy=By.linkText("Buy");
+	static By rent=By.linkText("Rent");
 	static By Condos=By.xpath("//*[@id=\"navbar-main\"]/div/div[2]/ul[2]/li[3]/a");
 	static By HDB=By.xpath("//*[@id=\"navbar-main\"]/div/div[2]/ul[2]/li[4]/a");
 	static By NewProjects=By.xpath("//*[@id=\"navbar-main\"]/div/div[2]/ul[2]/li[5]/a");
@@ -18,13 +18,22 @@ public class Hyperlink extends BaseClass{
 	
 	public void hyperLink() {
 		driver.findElement(Buy).click();
-		driver.findElement(Rent).click();
+		driver.navigate().back();
+		driver.findElement(rent).click();
+		driver.navigate().back();
 		driver.findElement(Condos).click();
+		driver.navigate().back();
 		driver.findElement(HDB).click();
+		driver.navigate().back();
 		driver.findElement(NewProjects).click();
+		driver.navigate().back();
 		driver.findElement(Mortgages).click();
+		driver.navigate().back();
 		driver.findElement(Overseas).click();
+		driver.navigate().back();
 		driver.findElement(FindAgent).click();
+		driver.navigate().back();
 		driver.findElement(Guides).click();
+		driver.navigate().back();
 	}
 }

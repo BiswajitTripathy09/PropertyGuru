@@ -1,9 +1,12 @@
 package com.testScript;
 
+import org.testng.annotations.Test;
+
 import com.pages.*;
 
 public class HyperLink {
-	public static void main(String args[]) { 
+	@Test
+	public void hyperlink() {
 		Hyperlink ob=new Hyperlink();
 		
 		ob.OpenApplication();
@@ -12,4 +15,5 @@ public class HyperLink {
 		ob.CloseApplication();
 
 }
+
 }
